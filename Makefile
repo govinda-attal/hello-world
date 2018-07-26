@@ -1,4 +1,4 @@
-.PHONY: init install test build db-local db-migrate-up db-migrate-down serve clean pack deploy ship run
+.PHONY: init install test build serve clean pack deploy ship run
 
 include .env
 export $(shell sed 's/=.*//' .env)

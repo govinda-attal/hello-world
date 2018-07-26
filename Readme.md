@@ -52,11 +52,9 @@ cd $GOPATH/src/github.com/govinda-attal/hello-world
 make test # This will run execute unit tests with ginkgo -r command
 ```
 
-### Integration tests
+## Setup
 
-This microservice achives given requirements with Golang and Postgres Database as backend. To keep this foot-print of this application minimum postgres db will execute within a docker container. Where as following backend microservice can be hosted within a docker container or local OS.
-
-#### Option A: Docker Compose - Microservice and Swagger UI as docker containers (Preferred) :heavy_check_mark:
+### Option A: Docker Compose - Microservice and Swagger UI as docker containers (Preferred) :heavy_check_mark:
 
 ```
 cd $GOPATH/src/github.com/govinda-attal/hello-world
@@ -67,7 +65,7 @@ Docker compose will orchestrate containers and they can be accessed from Local O
 1. Microservice on :earth_asia: http://localhost:3000
 2. Swagger-UI on :earth_asia: http://localhost:8080
 
-#### Option B: Microservice is run in a docker container
+### Option B: Microservice is run in a docker container
 
 ```
 cd $GOPATH/src/github.com/govinda-attal/hello-world
@@ -75,7 +73,7 @@ cd $GOPATH/src/github.com/govinda-attal/hello-world
 make run # This will build the docker image for microservice and spin a container locally and the API is exposed on port 3000
 ```
 
-#### Option C: Microservice is run locally on your OS
+### Option C: Microservice is run locally on your OS
 
 ```
 cd $GOPATH/src/github.com/govinda-attal/hello-world
