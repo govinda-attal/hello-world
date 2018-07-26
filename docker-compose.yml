@@ -1,0 +1,31 @@
+version: '3'
+services:
+  hello:
+    container_name: hello
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_NAME : hello
+    image:
+      gattal/hello:1.0
+    ports: 
+      - 3000:3333
+    networks:
+      - default
+    command: sh -c "./hello"
+  swagger-ui:
+    container_name: hello-swagger-ui
+    image: swaggerapi/swagger-ui
+    restart: always
+    environment: 
+      - API_URL=http://localhost:3000/api/swagger.yaml
+    ports: 
+      - 8080:8080
+    depends_on:
+      - hello
+    networks:
+      - default
+        
+networks: 
+  default:

@@ -1,0 +1,53 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Hello-World API
+  contact:
+    name: Govinda Attal
+    email: govinda.attal@gmail.com
+host: localhost:3000
+basePath: /
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      description: Hello Greetings
+      operationId: hello
+      parameters:
+        - name: name
+          in: query
+          description: name of the person/bot
+          required: false
+          type: string
+      responses:
+        '200':
+          description: hello-world response
+          schema:
+            $ref: '#/definitions/HelloRs'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/error'
+  
+definitions:
+  HelloRs:
+    type: object
+    properties:
+      Greetings:
+        type: string
+  error:
+    type: object
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
