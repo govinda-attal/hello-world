@@ -86,6 +86,8 @@ make serve # This will build the Microservice and run it locally and the API is 
 1. :earth_asia: http://localhost:3000/?name=X
 2. :earth_asia: http://localhost:3000/?name=error
 
+* Note: If setup locally (no docker) then use port 3333 instead of 3000
+
 ### Swagger UI to view and trial Microservice Open API
 
 Post running command *docker-compose up -d* use browser to open :earth_asia: http://localhost:8080
